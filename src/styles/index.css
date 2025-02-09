@@ -8,7 +8,15 @@
 }
 
 #main-screen {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: lighter;
+    transform: translateY(-50%);
 }
 
 #start-button {
