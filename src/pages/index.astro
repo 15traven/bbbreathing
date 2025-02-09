@@ -5,10 +5,11 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout>
 	<div class="wrapper">
-		<main class="main">
+		<main>
 			<div id="main-screen">
 				<h1 class="title">Box Breathing</h1>
 				<button id="start-button">Start</button>
+				<a href="/learn-more">Learn more</a>
 			</div>
 			<div id="exercise-screen">
 				<div class="exercise-container">
@@ -43,7 +44,7 @@ import Layout from '../layouts/Layout.astro'
 	}
 
 	const finishExercise = () => {
-		mainSreen.style.display = 'block'
+		mainSreen.style.display = 'flex'
 		exerciseScreen.style.display = 'none'
 	}
 

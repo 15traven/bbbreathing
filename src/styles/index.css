@@ -1,16 +1,13 @@
 @import url(./animations.css);
 
-.main {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #main-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#main-screen a {
+    transform: translateY(50%);
 }
 
 .title {
