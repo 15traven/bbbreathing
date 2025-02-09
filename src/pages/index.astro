@@ -10,34 +10,42 @@ import Layout from '../layouts/Layout.astro'
 				<button id="start-button">Start</button>
 			</div>
 			<div id="exercise-screen">
-				<div class="box-animated">
-					<div class="side bottom"></div>
-					<div class="side right"></div>
-					<div class="side top"></div>
-					<div class="side left"></div>
+				<div class="exercise-container">
+					<div class="box-animated">
+						<div class="side bottom"></div>
+						<div class="side right"></div>
+						<div class="side top"></div>
+						<div class="side left"></div>
+					</div>
+				
+					<div class="placeholder">
+						<p class="hint top">Breath out</p>
+						<p class="hint left">Hold</p>
+						<div class="box-path"></div>
+						<p class="hint right">Hold</p>
+						<p class="hint bottom">Breath in</p>
+					</div>
 				</div>
-			
-				<div class="placeholder">
-					<p class="hint top">Breath out</p>
-					<p class="hint left">Hold</p>
-					<div class="box-path"></div>
-					<p class="hint right">Hold</p>
-					<p class="hint bottom">Breath in</p>
-				</div>
+				<button id="finish-button">Finish</button>
 			</div>
 		</main>
 	</div>
 </Layout>
 
 <script is:inline>
-	const startExercise = () => {
-		console.log('start')
-		const mainSreen = document.getElementById('main-screen')
-		const exerciseScreen = document.getElementById('exercise-screen')
+	const mainSreen = document.getElementById('main-screen')
+	const exerciseScreen = document.getElementById('exercise-screen')
 
+	const startExercise = () => {
 		mainSreen.style.display = 'none'
-		exerciseScreen.style.display = 'block'
+		exerciseScreen.style.display = 'flex'
+	}
+
+	const finishExercise = () => {
+		mainSreen.style.display = 'block'
+		exerciseScreen.style.display = 'none'
 	}
 
 	document.getElementById('start-button')?.addEventListener('click', startExercise)
+	document.getElementById('finish-button')?.addEventListener('click', finishExercise)
 </script>
