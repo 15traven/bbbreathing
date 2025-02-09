@@ -13,8 +13,8 @@
 
 #start-button {
     background: none;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
     width: 250px;
     height: 42px;
     border-radius: 25px;
@@ -28,9 +28,9 @@
 #finish-button {
     transform: translateY(700%);
     background: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--primary-color);
     border-radius: 25px;
-    color: #fff;
+    color: var(--text-color);
     opacity: 50%;
     transition: all 300ms;
 }
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: var(--text-color);
     animation: enter 2s forwards;
     z-index: -1;
 }
@@ -62,7 +62,7 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    border: 4px solid #303030;
+    border: 4px solid var(--path-color);
 }
 
 .placeholder .hint {
@@ -104,7 +104,7 @@
 
 .box-animated .side {
     position: absolute;
-    background-color: white;
+    background-color: var(--primary-color);
 }
 
 .box-animated .bottom {

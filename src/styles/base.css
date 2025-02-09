@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --background: #fffafa;
+    --text-color: #000;
+    --primary-color: #000;
+    --path-color: #dbdbdb;
+}
+
+.dark {
+    --background: #121212;
+    --text-color: #fff;
+    --primary-color: #fff;
+    --path-color: #303030;
+
+    .sun-icon { 
+        fill: transparent; 
+    }
+
+    .moon-icon { 
+        fill: var(--primary-color); 
+    }
+}
+
 body {
     font-family: "Open Sans", serif;
-    background: #121212;
-    color: #fff;
+    background: var(--background);
+    color: var(--text-color);
 }
 
 .wrapper {
@@ -18,8 +40,26 @@ header {
     padding: 16px 0;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo {
     width: 32px;
     height: 32px;
-    border: 2px solid #fff;
+    border: 2px solid var(--primary-color);
+}
+
+#themeToggle {
+    border: 0;
+    background: none;
+}
+
+.sun-icon { 
+    fill: var(--primary-color); 
+}
+
+.moon-icon { 
+    fill: transparent; 
 }
