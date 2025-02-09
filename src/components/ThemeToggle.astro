@@ -8,8 +8,16 @@
 <!-- styles located in /src/styles/base.css -->
 
 <script is:inline>
+    const root = document.documentElement
+
+    const storedTheme = localStorage?.getItem('theme')
+    if (storedTheme == 'dark') root.classList.add('dark')
+
     const toggleTheme = () => {
-        document.documentElement.classList.toggle('dark')
+        root.classList.toggle('dark')
+
+        const isDark = root.classList.contains('dark')
+        localStorage?.setItem('theme', isDark ? 'dark' : null)
     }
 
     document.getElementById('themeToggle')?.addEventListener('click', toggleTheme)
