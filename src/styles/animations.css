@@ -1,0 +1,79 @@
+@keyframes hint-bottom {
+    15.75% { opacity: 100%; }
+    23% { opacity: 50%; }
+}
+
+@keyframes hint-right {
+    23.75% {opacity: 50%; }
+    39.5% { opacity: 100%; }
+    47% { opacity: 50%; }
+}
+
+@keyframes hint-top {
+    47.5% { opacity: 50%; }
+    63.25% { opacity: 100%; }
+    71% { opacity: 50%; }
+}
+
+@keyframes hint-left {
+    71.25% { opacity: 50%; }
+    87% { opacity: 100%; }
+    94.5% { opacity: 50%; }
+}
+
+@keyframes draw-bottom {
+    0% { 
+        width: 0; 
+        opacity: 1;
+    }
+    23.75% { width: 100px; }
+    95% { opacity: 1; }
+    100% { 
+        width: 100px;
+        opacity: 0; 
+    }
+}
+
+@keyframes draw-right {
+    0% { 
+        height: 0; 
+        opacity: 1;
+    }
+    23.75% { height: 0; }
+    47.5% { height: 100px; }
+    95% { opacity: 1; }
+    100% { 
+        height: 100px;
+        opacity: 0; 
+    }
+}
+
+@keyframes draw-top {
+    0% { 
+        width: 0; 
+        opacity: 1;
+    }
+    47.5% { width: 0; }
+    71.25% { width: 100px; }
+    95% { opacity: 1; }
+    100% { 
+        width: 100px;
+        opacity: 0; 
+    }
+}
+
+@keyframes draw-left {
+    0% { 
+        height: 0;
+        opacity: 1;
+    }
+    71.25% { height: 0; }
+    95% {
+        height: 100px;
+        opacity: 1;
+    }
+    100% { 
+        height: 100px; 
+        opacity: 0;
+    }
+}

@@ -1,3 +1,5 @@
+@import url(./animations.css);
+
 .main {
     height: 100vh;
     display: flex;
@@ -5,11 +7,115 @@
     align-items: center;
 }
 
-.start-button {
+#main-screen {
+    display: none;
+}
+
+#start-button {
     background: none;
     border: 1px solid #fff;
     color: #fff;
     width: 250px;
     height: 42px;
     border-radius: 25px;
+}
+
+#exercise-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: #fff;
+    animation: enter 2s forwards;
+    z-index: -1;
+}
+
+.placeholder .box-path {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: 4px solid #303030;
+}
+
+.placeholder .hint {
+    position: absolute;
+    text-wrap: nowrap;
+    opacity: 50%;
+}
+
+.hint.top {
+    bottom: 100%;
+    left: 8%;
+    animation: hint-top 16s infinite;
+}
+
+.hint.bottom {
+    top: 100%;
+    left: 14%;
+    animation: hint-bottom 16s infinite;
+}
+
+.hint.left {
+    left: -25px;
+    writing-mode:sideways-lr;
+    animation: hint-left 16s infinite;
+}
+
+.hint.right {
+    left: 100%;
+    writing-mode:sideways-rl;
+    animation: hint-right 16s infinite;
+}
+
+.box-animated {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform: translateX(50%);
+}
+
+.box-animated .side {
+    position: absolute;
+    background-color: white;
+}
+
+.box-animated .bottom {
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    animation: draw-bottom 16s infinite;
+}
+
+.box-animated .right {
+    width: 4px;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    animation: draw-right 16s infinite;
+}
+
+.box-animated .top {
+    width: 0;
+    height: 4px;
+    top: 0;
+    right: 0;
+    animation: draw-top 16s infinite;
+}
+
+.box-animated .left {
+    width: 4px;
+    height: 0;
+    left: 0;
+    top: 0;
+    animation: draw-left 16s infinite;
 }
