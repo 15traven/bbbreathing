@@ -16,3 +16,7 @@ main a {
 h3 {
     margin-top: 24px;
 }
+
+article {
+    font-size: 1.7vh;
+}

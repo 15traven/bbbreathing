@@ -27,6 +27,8 @@ body {
     font-family: "Open Sans", serif;
     background: var(--background);
     color: var(--text-color);
+    transition: background-color .8s;
+    user-select: none;
 }
 
 main {
@@ -34,6 +36,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 a {

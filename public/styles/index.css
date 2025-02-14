@@ -25,6 +25,19 @@
     border-radius: 25px;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-top: -10%;
+}
+
+footer a {
+    font-weight: bold;
+}
+
 #exercise-screen {
     display: none;
     flex-direction: column;
@@ -91,7 +104,7 @@
 }
 
 .hint.left {
-    left: -25px;
+    right: 100%;
     writing-mode:sideways-lr;
     animation: init 4s forwards, hint-left 16s 4s infinite;
 }

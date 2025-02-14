@@ -30,21 +30,34 @@ import Layout from '../layouts/Layout.astro'
 				<button id="finish-button">Finish</button>
 			</div>
 		</main>
+		<footer id="footer">
+			<p>
+				This project is
+				<a href="https://github.com/15traven/bbbreathing">open source</a>
+			</p>
+		</footer>
 	</div>
 </Layout>
 
 <script is:inline>
 	const mainSreen = document.getElementById('main-screen')
 	const exerciseScreen = document.getElementById('exercise-screen')
+	const footer = document.getElementById('footer')
 
 	const startExercise = () => {
 		mainSreen.style.display = 'none'
 		exerciseScreen.style.display = 'flex'
+		footer.style.display = 'none'
 	}
 
 	const finishExercise = () => {
-		mainSreen.style.display = 'flex'
-		exerciseScreen.style.display = 'none'
+		const userConfirmed = window.confirm('Are you sure you want to perform this action?')
+      
+		if (userConfirmed) {
+			mainSreen.style.display = 'flex'
+			exerciseScreen.style.display = 'none'
+			footer.style.display = 'flex'
+		}
 	}
 
 	document.getElementById('start-button')?.addEventListener('click', startExercise)
