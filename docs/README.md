@@ -17,3 +17,5 @@ PROJECT_ROOT
 │   ├── pages            # page files
 └──
 ```
+
+![GitHub last commit](https://img.shields.io/github/last-commit/15traven/bbbreathing?logo=github)
